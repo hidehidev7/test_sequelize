@@ -16,6 +16,7 @@ const sequelize = new Sequelize('dvdrental', 'postgres', 'matrix_revolution', {
 
 const app = express();
 
+//Routing
 app.get('/', (req, res) => {
   res.send('Hello World!');
 });
