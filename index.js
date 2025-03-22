@@ -14,8 +14,12 @@ const sequelize = new Sequelize('dvdrental', 'postgres', 'matrix_revolution', {
   }
 })();
 
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Welcome!');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
-server.listen(3000);
+
+app.listen(3000, () => {
+  console.log('Server listening on port 3000');
+});
