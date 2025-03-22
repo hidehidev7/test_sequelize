@@ -1,4 +1,4 @@
-import http from 'node:http';
+import express from 'express';
 import Sequelize from 'sequelize';
 
 const sequelize = new Sequelize('dvdrental', 'postgres', 'matrix_revolution', {
