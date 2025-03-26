@@ -45,5 +45,6 @@ app.data = {};
 app.data.init = () => {
   app.data.serverButtonCount = 0;
 }
+app.data.init();
 
 module.exports = app;
