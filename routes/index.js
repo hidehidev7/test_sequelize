@@ -18,7 +18,9 @@ router.get('/serverbutton/', function(req, res, next) {
 
 router.get('/serverbutton/push/', function(req, res, next) {
   app.data.serverButtonCount++;
+  const presentCount = app.data.serverButtonCount;
   setTimeout(() => {
+    if(presentCount !== app.data.serverButtonCount) return;
     res.redirect('/serverbutton/');
   }, 1000);
 });
