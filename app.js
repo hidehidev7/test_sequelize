@@ -43,7 +43,7 @@ app.use(function(err, req, res, next) {
 // app data
 app.data = {};
 app.data.init = () => {
-  
+  app.data.serverButtonCount = 0;
 }
 
 module.exports = app;
