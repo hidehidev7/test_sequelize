@@ -13,14 +13,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/serverbutton/', function(req, res, next) {
-  setTimeout(() => {
-    res.render('serverbutton', { serverButtonCount: app.data.serverButtonCount });
-  }, 1000);
+  res.render('serverbutton', { serverButtonCount: app.data.serverButtonCount });
 });
 
 router.get('/serverbutton/push/', function(req, res, next) {
   app.data.serverButtonCount++;
-  res.redirect('/serverbutton/');
+  setTimeout(() => {
+    res.redirect('/serverbutton/');
+  }, 1000);
 });
 
 module.exports = router;
