@@ -40,4 +40,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// app data
+app.data = {};
+
 module.exports = app;
