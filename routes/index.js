@@ -10,4 +10,8 @@ router.get('/serverbutton/', function(req, res, next) {
   res.render('serverbutton');
 });
 
+router.get('/serverbutton/push/', function(req, res, next) {
+  res.render('serverbutton');
+});
+
 module.exports = router;
