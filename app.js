@@ -42,5 +42,8 @@ app.use(function(err, req, res, next) {
 
 // app data
 app.data = {};
+app.data.init = () => {
+  
+}
 
 module.exports = app;
