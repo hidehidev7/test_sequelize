@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    h1 The Server Button
+    p ボタンを押すと押された回数が増える
+    div
+        form(method="get" action="/serverbutton/push")
+            input(type="submit" value="ボタン")
