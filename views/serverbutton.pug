@@ -5,5 +5,5 @@ block content
     p ボタンを押すと押された回数が増える
     div
         form(method="get" action="/serverbutton/push/")
-            input(type="submit" value="ボタン")
+            input(type="submit" value="ボタン" onclick="this.disabled=true; this.value='送り中…'; this.form.submit()")
     p サーバーが起動してからボタンは#{serverButtonCount}回押された
